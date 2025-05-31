@@ -1,3 +1,14 @@
+
+/* 
+Escamitas
+
+Los expertos en peces recomiendan
+una temperatura tibia entre 21 y 29 grados (el agua está fría a menor temperatura y caliente
+a mayor temperatura), pero los peces podrán sobrevivir incluso a temperaturas no menores
+que 15 grados y no mayores que 34 grados.
+
+*/
+    
 package paquete.e2;
 import java.util.Scanner; 
 
