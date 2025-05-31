@@ -1,3 +1,8 @@
+/*
+Elevando a alguna potencia
+Dados dos valores a y b, calcular el valore de a^b.
+*/
+
 package paquete.e1;
 import java.util.Scanner; 
 
