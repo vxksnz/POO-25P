@@ -8,11 +8,10 @@ a mayor temperatura), pero los peces podrán sobrevivir incluso a temperaturas n
 que 15 grados y no mayores que 34 grados.
 
 */
-    
-package paquete.e2;
+
 import java.util.Scanner; 
 
-public class E2 {
+public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in); 
         int t = scan.nextInt();
