@@ -53,14 +53,21 @@ public class Calculadora {
         if (n%2==0) return true;
         else return false;
     }
-    //public pow(int a, int b){
-        
-    //}
+    public int pow(int a, int b){
+        if (b == 0) {
+            return 1;
+        } else if (b % 2 == 0) {
+            int t = pow(a, b / 2);
+            return t * t;
+        } else if (b % 2 == 1) {
+            int t = pow(a, b / 2);
+            return t * t * a;
+        }
+        return 1;
+    }
     
-    
-    
-    
-    
-    
-    
+    public int contarDigitos(int n){
+        return String.valueOf(Math.abs(n)).length();
+    }
+
 }
