@@ -5,42 +5,84 @@
  */
 package paquete1;
 
+import java.util.ArrayList;
 /**
  *
  * @author vickh
  */
 public class Curso {
-    private String id;
-    private String trimestre;
-
-    public Curso() {
+    private String grupo;
+    private String horario;
+    private Uea uea;
+    private Profesor profesor;
+    private ArrayList<Alumno> alumnos;
+    
+    public Curso(){
+        uea = new Uea();
+        profesor = new Profesor();
+        alumnos = new ArrayList<>();
+    }
+    public Curso(String grupo, String horario, String clave, String nombreUea, Profesor profesor){
+        this.grupo=grupo;
+        this.horario=horario;
+        uea = new Uea(clave,nombreUea);
+        this.profesor = profesor;
+        alumnos = new ArrayList<>();
     }
 
-    public Curso(String id, String trimestre) {
-        this.id = id;
-        this.trimestre = trimestre;
+    public String getGrupo() {
+        return grupo;
     }
 
-    public String getId() {
-        return id;
+    public void setGrupo(String grupo) {
+        this.grupo = grupo;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getHorario() {
+        return horario;
     }
 
-    public String getTrimestre() {
-        return trimestre;
+    public void setHorario(String horario) {
+        this.horario = horario;
+    } 
+    
+    public Uea getUea() {
+        return uea;
     }
 
-    public void setTrimestre(String trimestre) {
-        this.trimestre = trimestre;
+    public Profesor getProfesor() {
+        return profesor;
+    }
+    
+    
+    public void setUea(String nombreUea, String claveUea) {
+        uea.setClaveUea(claveUea);
+        uea.setNombreUea(nombreUea);
+    }
+
+    public void setProfesor(String numeroEconomico, String nombre) {
+        profesor.setNumeroEconomico(numeroEconomico);
+        profesor.setNombre(nombre);
+    }
+
+    public ArrayList<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public void setAlumnos(ArrayList<Alumno> alumnos) {
+        this.alumnos = alumnos;
+    }
+    
+    public void agregarAlumno(Alumno alumno){
+        alumnos.add(alumno);
     }
 
     @Override
     public String toString() {
-        return "Curso{" + "id=" + id + ", trimestre=" + trimestre + '}';
+        return "Curso: \nGrupo:" + grupo + "\nhorario:" + horario + "\nUEA:" + uea + "\nProfesor" + profesor + "\nAlumnos:\n" + alumnos ;
     }
+    
+    
     
     
 }
